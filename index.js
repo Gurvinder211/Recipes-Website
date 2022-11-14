@@ -3,7 +3,9 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+    extensions: ['html', 'htm'],
+}));
 
 const PORT = process.env.PORT || 5000;
 
